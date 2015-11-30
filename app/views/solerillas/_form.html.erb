@@ -1,0 +1,41 @@
+<%= form_for(@solerilla) do |f| %>
+  <% if @solerilla.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@solerilla.errors.count, "error") %> prohibited this solerilla from being saved:</h2>
+
+      <ul>
+      <% @solerilla.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :denominacion %><br>
+    <%= f.text_field :denominacion %>
+  </div>
+  <div class="field">
+    <%= f.label :largo_l_mm %><br>
+    <%= f.number_field :largo_l_mm %>
+  </div>
+  <div class="field">
+    <%= f.label :altura_h_mm %><br>
+    <%= f.number_field :altura_h_mm %>
+  </div>
+  <div class="field">
+    <%= f.label :base_b_mm %><br>
+    <%= f.number_field :base_b_mm %>
+  </div>
+  <div class="field">
+    <%= f.label :resistencia_flexion_kn %><br>
+    <%= f.number_field :resistencia_flexion_kn %>
+  </div>
+  <div class="field">
+    <%= f.label :peso_referencial_kg %><br>
+    <%= f.number_field :peso_referencial_kg %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

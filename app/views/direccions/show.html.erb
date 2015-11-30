@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Calle:</strong>
+  <%= @direccion.calle %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @direccion.numero %>
+</p>
+
+<p>
+  <strong>Comuna:</strong>
+  <%= @direccion.comuna %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @direccion.ciudad %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @direccion.region %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @direccion.pais %>
+</p>
+
+<p>
+  <strong>Trabajador:</strong>
+  <%= @direccion.trabajador.nombres %>
+</p>
+
+<%= link_to 'Editar', edit_direccion_path(@direccion) %> |
+<%= link_to 'Volver', direccions_path %>

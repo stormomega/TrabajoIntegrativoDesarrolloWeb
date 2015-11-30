@@ -1,0 +1,67 @@
+<%= form_for(@trabajador) do |f| %>
+  <% if @trabajador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trabajador.errors.count, "error") %> prohibited this trabajador from being saved:</h2>
+
+      <ul>
+      <% @trabajador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rut %><br>
+    <%= f.number_field :rut %>
+  </div>
+  <div class="field">
+    <%= f.label :nombres %><br>
+    <%= f.text_field :nombres %>
+  </div>
+  <div class="field">
+    <%= f.label :apellidopaterno %><br>
+    <%= f.text_field :apellidopaterno %>
+  </div>
+  <div class="field">
+    <%= f.label :apellidomaterno %><br>
+    <%= f.text_field :apellidomaterno %>
+  </div>
+  <div class="field">
+    <%= f.label :fechanacimineto %><br>
+    <%= f.date_select :fechanacimineto, start_year: 1950 ,last_year: 2050 %>
+  </div>
+  <div class="field">
+  <% estado = {
+    'Soltero' => 'Soltero',
+    'Casado' => 'Casado',
+    'Divorciado'=> 'Divorciado',
+    'Viudo' => 'Viudo',
+    }%>
+    <%= f.label :estadocivil %><br>
+    <%= f.select( :estadocivil, estado , {include_blank: 'Seleccione estado civil'} )%>
+  </div>
+  <div class="field">
+  <% sex = {
+    'Masculino' => 'Masculino',
+    'Femenino' => 'Femenino',
+    }%>
+    <%= f.label :sexo %><br>
+    <%= f.select( :sexo, sex , {include_blank: 'Seleccione sexo'} )%>
+  </div>
+  <div class="field">
+    <%= f.label :celular %><br>
+    <%= f.number_field :celular %>
+  </div>
+  <div class="field">
+    <%= f.label :correo %><br>
+    <%= f.text_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :cargo %><br>
+    <%= f.text_field :cargo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

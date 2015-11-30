@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trabajadores</title>
+</head>
+<body>
+<header>
+     <h1 style="padding-left: 30px;">Lista de Trabajadores</h1>
+</header>
+<section style="padding:20px;">
+<table width="96%"  border="1">
+  <thead>
+    <tr bgcolor="lightblue">
+      <th>Rut</th>
+      <th>Nombres</th>
+      <th>Apellido Paterno</th>
+      <th>Apellido Materno</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Estado civil</th>
+      <th>Sexo</th>
+      <th>Celular</th>
+      <th>Correo</th>
+      <th>Cargo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trabajadors.each do |trabajador| %>
+      <tr>
+        <td><%= trabajador.rut %></td>
+        <td><%= trabajador.nombres %></td>
+        <td><%= trabajador.apellidopaterno %></td>
+        <td><%= trabajador.apellidomaterno %></td>
+        <td><%= trabajador.fechanacimineto %></td>
+        <td><%= trabajador.estadocivil %></td>
+        <td><%= trabajador.sexo %></td>
+        <td><%= trabajador.celular %></td>
+        <td><%= trabajador.correo %></td>
+        <td><%= trabajador.cargo %></td>
+        <td><%= link_to 'Show', trabajador %></td>
+        <td><%= link_to 'Edit', edit_trabajador_path(trabajador) %></td>
+        <td><%= link_to 'Destroy', trabajador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'Crear nuevo Registro', new_trabajador_path %>
+</section>
+
+</body>
+</html>

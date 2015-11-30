@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calle: MyString
+  numero: 1
+  comuna: MyString
+  ciudad: MyString
+  region: MyString
+  pais: MyString
+  trabajador_id: 
+
+two:
+  calle: MyString
+  numero: 1
+  comuna: MyString
+  ciudad: MyString
+  region: MyString
+  pais: MyString
+  trabajador_id: 

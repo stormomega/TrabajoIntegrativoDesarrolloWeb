@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soleras</title>
+</head>
+<body>
+<header>
+     <h1 style="padding-left: 30px;">Lista de Soleras</h1>
+</header>
+<section style="padding:20px;">
+<table width="90%"  border="1" >
+  <thead>
+    <tr bgcolor="lightblue" >
+      <th>Denominacion</th>
+      <th>Altura h mm</th>
+      <th>Base b mm</th>
+      <th>Ancho superior c mm</th>
+      <th>Rebaje triangular e mm</th>
+      <th>Rebaje triangular d mm</th>
+      <th>Largo a mm</th>
+      <th>Resistencia flexion kn</th>
+      <th>Peso referencial kg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @soleras.each do |solera| %>
+      <tr>
+        <td><%= solera.denominacion %></td>
+        <td><%= solera.altura_h_mm %></td>
+        <td><%= solera.base_b_mm %></td>
+        <td><%= solera.ancho_superior_c_mm %></td>
+        <td><%= solera.rebaje_triangular_e_mm %></td>
+        <td><%= solera.rebaje_triangular_d_mm %></td>
+        <td><%= solera.largo_a_mm %></td>
+        <td><%= solera.resistencia_flexion_kn %></td>
+        <td><%= solera.peso_referencial_kg %></td>
+        <td><%= link_to 'Show', solera %></td>
+        <td><%= link_to 'Edit', edit_solera_path(solera) %></td>
+        <td><%= link_to 'Destroy', solera, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</section>
+
+<br>
+
+<%= link_to 'Crear Nuevo Registro', new_solera_path %>
+</body>
+</html>

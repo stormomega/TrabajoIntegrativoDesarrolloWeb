@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  denominacion: MyString
+  largo_l_mm: 1
+  altura_h_mm: 1
+  base_b_mm: 1
+  resistencia_flexion_kn: 1
+  peso_referencial_kg: 1
+
+two:
+  denominacion: MyString
+  largo_l_mm: 1
+  altura_h_mm: 1
+  base_b_mm: 1
+  resistencia_flexion_kn: 1
+  peso_referencial_kg: 1

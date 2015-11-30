@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  denominacion: MyString
+  altura_h_mm: 1
+  base_b_mm: 1
+  ancho_superior_c_mm: 1
+  rebaje_triangular_e_mm: 1
+  rebaje_triangular_d_mm: 1
+  largo_a_mm: 1
+  resistencia_flexion_kn: 1
+  peso_referencial_kg: 1
+
+two:
+  denominacion: MyString
+  altura_h_mm: 1
+  base_b_mm: 1
+  ancho_superior_c_mm: 1
+  rebaje_triangular_e_mm: 1
+  rebaje_triangular_d_mm: 1
+  largo_a_mm: 1
+  resistencia_flexion_kn: 1
+  peso_referencial_kg: 1

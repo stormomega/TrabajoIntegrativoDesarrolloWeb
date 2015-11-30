@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Denominacion:</strong>
+  <%= @solera.denominacion %>
+</p>
+
+<p>
+  <strong>Altura h mm:</strong>
+  <%= @solera.altura_h_mm %>
+</p>
+
+<p>
+  <strong>Base b mm:</strong>
+  <%= @solera.base_b_mm %>
+</p>
+
+<p>
+  <strong>Ancho superior c mm:</strong>
+  <%= @solera.ancho_superior_c_mm %>
+</p>
+
+<p>
+  <strong>Rebaje triangular e mm:</strong>
+  <%= @solera.rebaje_triangular_e_mm %>
+</p>
+
+<p>
+  <strong>Rebaje triangular d mm:</strong>
+  <%= @solera.rebaje_triangular_d_mm %>
+</p>
+
+<p>
+  <strong>Largo a mm:</strong>
+  <%= @solera.largo_a_mm %>
+</p>
+
+<p>
+  <strong>Resistencia flexion kn:</strong>
+  <%= @solera.resistencia_flexion_kn %>
+</p>
+
+<p>
+  <strong>Peso referencial kg:</strong>
+  <%= @solera.peso_referencial_kg %>
+</p>
+
+<%= link_to 'Edit', edit_solera_path(@solera) %> |
+<%= link_to 'Back', soleras_path %>

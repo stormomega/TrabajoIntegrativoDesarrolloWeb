@@ -1,0 +1,2 @@
+module SolerillasHelper
+end

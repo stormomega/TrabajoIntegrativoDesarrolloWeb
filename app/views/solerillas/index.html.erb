@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solerillas</title>
+</head>
+<body>
+<header>
+     <h1 style="padding-left: 30px;">Lista de Solerillas</h1>
+</header>
+<section style="padding:20px;">
+<table width="70%"  border="1" >
+  <thead>
+    <tr bgcolor="lightblue" >
+      <th>Denominacion</th>
+      <th>Largo l mm</th>
+      <th>Altura h mm</th>
+      <th>Base b mm</th>
+      <th>Resistencia flexion kn</th>
+      <th>Peso referencial kg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solerillas.each do |solerilla| %>
+      <tr>
+        <td><%= solerilla.denominacion %></td>
+        <td><%= solerilla.largo_l_mm %></td>
+        <td><%= solerilla.altura_h_mm %></td>
+        <td><%= solerilla.base_b_mm %></td>
+        <td><%= solerilla.resistencia_flexion_kn %></td>
+        <td><%= solerilla.peso_referencial_kg %></td>
+        <td><%= link_to 'Show', solerilla %></td>
+        <td><%= link_to 'Edit', edit_solerilla_path(solerilla) %></td>
+        <td><%= link_to 'Destroy', solerilla, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'Crear Nuevo Registro', new_solerilla_path %>
+</section>
+</body>
+</html>

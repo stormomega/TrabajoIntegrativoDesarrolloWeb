@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Denominacion:</strong>
+  <%= @solerilla.denominacion %>
+</p>
+
+<p>
+  <strong>Largo l mm:</strong>
+  <%= @solerilla.largo_l_mm %>
+</p>
+
+<p>
+  <strong>Altura h mm:</strong>
+  <%= @solerilla.altura_h_mm %>
+</p>
+
+<p>
+  <strong>Base b mm:</strong>
+  <%= @solerilla.base_b_mm %>
+</p>
+
+<p>
+  <strong>Resistencia flexion kn:</strong>
+  <%= @solerilla.resistencia_flexion_kn %>
+</p>
+
+<p>
+  <strong>Peso referencial kg:</strong>
+  <%= @solerilla.peso_referencial_kg %>
+</p>
+
+<%= link_to 'Edit', edit_solerilla_path(@solerilla) %> |
+<%= link_to 'Back', solerillas_path %>
